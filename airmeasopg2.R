@@ -18,7 +18,7 @@ con <- dbConnect(MariaDB(),
                  dbname = "airmeas", 
                  host = "44.220.138.21",
                  user = "dalremote", 
-                 password = Sys.getenv("air_password"))
+                 password = Sys.getenv("db_password"))
 log_print("Database connection established")
 
 # Stationer og URL'er
