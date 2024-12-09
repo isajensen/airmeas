@@ -1,4 +1,3 @@
-# Load nødvendige pakker
 library(httr)
 library(jsonlite)
 library(rvest)
@@ -13,7 +12,7 @@ log_file_path <- "~/git/airmeas/airmeas/airmeas.log"
 log_open(log_file_path)
 log_print("Script starting")
 
-# Databaseforbindelse
+# Opret forbindelse til db
 log_print("Establishing database connection")
 con <- dbConnect(RMariaDB::MariaDB(), 
                  dbname = "airmeas", 
@@ -22,7 +21,7 @@ con <- dbConnect(RMariaDB::MariaDB(),
                  password = "__________")
 log_print("Database connection established")
 
-# Liste over stationer med deres URL'er
+# Stationer og URL'er
 stations <- list(
   list(name = "Anholt", 
        url = "https://envs2.au.dk/Luftdata/Presentation/table/Rural/ANHO", 
@@ -104,7 +103,6 @@ for (station in stations) {
   })
 }
 
-# Luk forbindelsen
 log_print("Closing database connection")
 dbDisconnect(con)
 log_print("Script finished")
