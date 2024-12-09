@@ -14,7 +14,7 @@ log_print("Script starting")
 
 # Opret forbindelse til db
 log_print("Establishing database connection")
-con <- dbConnect(RMariaDB::MariaDB(), 
+con <- dbConnect(MariaDB(),  
                  dbname = "airmeas", 
                  host = "44.220.138.21",
                  user = "dalremote", 
