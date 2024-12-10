@@ -1,0 +1,68 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: common
+
+Attaching package: ‘logger’
+
+The following object is masked from ‘package:logr’:
+
+    log_error
+
+[1] "/home/ubuntu/git/airmeas/airmeas/log/airmeas.log"
+[1] "Script starting"
+[1] "Establishing database connection"
+[1] "Database connection established"
+[1] "Fetching data for station: Anholt"
+[1] "Data added for station: Anholt"
+[1] "Fetching data for station: HCAB"
+[1] "Data added for station: HCAB"
+[1] "Fetching data for station: Risø"
+[1] "Data added for station: Risø"
+[1] "Fetching data for station: Aarhus"
+[1] "Data added for station: Aarhus"
+[1] "Closing database connection"
+[1] "Script finished"
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: common
+
+Attaching package: ‘logger’
+
+The following object is masked from ‘package:logr’:
+
+    log_error
+
+[1] "/home/ubuntu/git/airmeas/airmeas/log/airmeas.log"
+[1] "Script starting"
+[1] "Establishing database connection"
+Error: Failed to connect: Access denied for user 'dalremote'@'44.220.138.21' (using password: NO)
+[1] "Error: Failed to connect: Access denied for user 'dalremote'@'44.220.138.21' (using password: NO)\n"
+[1] "Traceback:"
+[1] "4: connection_create(host, username, password, dbname, as.integer(port), "
+[2] "       unix.socket, as.integer(client.flag), group, default.file, "       
+[3] "       ssl.key, ssl.cert, ssl.ca, ssl.capath, ssl.cipher, timeout, "      
+[4] "       reconnect)"                                                        
+[5] "3: .local(drv, ...)"                                                      
+[6] "2: dbConnect(MariaDB(), dbname = \"airmeas\", host = \"44.220.138.21\", " 
+[7] "       user = \"dalremote\", password = Sys.getenv(\"db_password\"))"     
+[8] "1: dbConnect(MariaDB(), dbname = \"airmeas\", host = \"44.220.138.21\", " 
+[9] "       user = \"dalremote\", password = Sys.getenv(\"db_password\"))"     
+Execution halted
