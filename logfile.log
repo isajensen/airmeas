@@ -1,36 +1,0 @@
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Loading required package: common
-
-Attaching package: ‘logger’
-
-The following object is masked from ‘package:logr’:
-
-    log_error
-
-[1] "/home/ubuntu/git/airmeas/airmeas/log/airmeas.log"
-[1] "Script starting"
-[1] "Establishing database connection"
-[1] "Database connection established"
-[1] "Fetching data for station: Anholt"
-ERROR [2024-12-09 10:15:33] Failed to fetch data: 'Stationen er ude af drift i øjeblikket.  ' does not exist in current working directory ('/home/ubuntu').
-[1] "No data returned for station: Anholt"
-[1] "Fetching data for station: HCAB"
-ERROR [2024-12-09 10:16:04] Failed to fetch data: 'Stationen er ude af drift i øjeblikket.  ' does not exist in current working directory ('/home/ubuntu').
-[1] "No data returned for station: HCAB"
-[1] "Fetching data for station: Risø"
-ERROR [2024-12-09 10:16:34] Failed to fetch data: 'Stationen er ude af drift i øjeblikket.  ' does not exist in current working directory ('/home/ubuntu').
-[1] "No data returned for station: Risø"
-[1] "Fetching data for station: Aarhus"
-[1] "Data added for station: Aarhus"
-[1] "Closing database connection"
-[1] "Script finished"
