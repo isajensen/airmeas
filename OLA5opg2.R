@@ -1,4 +1,3 @@
-# Load nødvendige pakker
 library(httr)
 library(jsonlite)
 library(rvest)
