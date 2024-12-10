@@ -92,10 +92,10 @@ for (station in stations) {
     next
   }
   
-  # Konverter starttid til korrekt format
   df$`Målt (starttid)` <- as.POSIXct(df$`Målt (starttid)`, format = "%d-%m-%Y %H:%M", tz = "UTC")
   
   tryCatch({
+    dbExecute(con, paste0("DELETE FROM ", station$table_name, " WHERE 1=1"))
     dbWriteTable(con, station$table_name, df, append = TRUE, row.names = FALSE)
     log_print(paste("Data added for station:", station$name))
   }, error = function(e) {
@@ -108,4 +108,3 @@ log_print("Closing database connection")
 dbDisconnect(con)
 log_print("Script finished")
 log_close()
-
